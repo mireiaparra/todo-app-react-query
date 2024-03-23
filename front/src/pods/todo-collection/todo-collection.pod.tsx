@@ -1,11 +1,7 @@
-import { useQuery } from "@tanstack/react-query";
-import { getTodoCollection } from "./todo-collection.repository";
+import { useTodoCollectionQuery } from "./use-todo-collection-query.hook";
 
 export const TodoCollectionPod : React.FC = () => {
-  const {data: todoCollection = []} = useQuery({
-    queryKey: ["todoCollection"],
-    queryFn: () => getTodoCollection(),
-  })
+  const {todoCollection} = useTodoCollectionQuery();
   return (
     <div>
       <h1>TODO Collection</h1>
