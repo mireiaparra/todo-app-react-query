@@ -7,7 +7,7 @@ export const DashboardScene: React.FC = () => {
     <div>
       <h1>Dashboard</h1>
       <div>
-        <Link to={ROUTES.TODOS}>Ir listado TODO's</Link>
+        <Link to={ROUTES.TODOS}>TODO's list</Link>
       </div>
     </div>
   );

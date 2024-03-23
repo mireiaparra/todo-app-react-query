@@ -19,6 +19,16 @@
       "id": 4,
       "description": "Make dinner",
       "isDone": false
+    },
+    {
+      "id": 5,
+      "description": "Have Lunch",
+      "isDone": false
+    },
+    {
+      "id": 6,
+      "description": "Go to the park with Charlie",
+      "isDone": true
     }
   ]
 }

@@ -9,3 +9,4 @@ export const todoApiSchema = z.object({
 export const todoApiCollection = z.array(todoApiSchema);
 
 export type TodoModel = z.infer<typeof todoApiSchema>;
+

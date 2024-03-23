@@ -40,14 +40,14 @@ export const TodoCollectionPod : React.FC = () => {
   return (
     <div>
       <h1>TODO Collection</h1>
+      <div className={classes.todoList}>
       {todoCollection.map(todo => (
-        <div className={classes.todoList}>
           <React.Fragment key={todo.id}>
             <div>{todo.isDone ? '✅' : '  ❌' }</div>
             <span>{todo.description}</span>
             </React.Fragment>
-        </div>
       ))}
+      </div>
     <TodoAppendComponent
     mode={mode}
     setAppendMode={() => setMode("Append")}

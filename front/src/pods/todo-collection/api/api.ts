@@ -1,5 +1,5 @@
 import { ENV_VARIABLES } from "@/core/env";
-import { TodoModel, todoApiSchema } from "./api.model";
+import { TodoModel, todoApiCollection } from "./api.model";
 import axios from "axios";
 
 export const getTodoCollection = async (): Promise<TodoModel[]> => {
@@ -7,7 +7,7 @@ export const getTodoCollection = async (): Promise<TodoModel[]> => {
   const {data} = await axios.get<TodoModel[]>(`${ENV_VARIABLES.TODO_API_BASE_URL}/todos`);
   
   //Check if the response is the expected one
-  const result = todoApiSchema.safeParse(data);
+  const result = todoApiCollection.safeParse(data);
   if (!result.success) {
     console.error(result.error);
   }
