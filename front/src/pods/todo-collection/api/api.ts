@@ -13,3 +13,8 @@ export const getTodoCollection = async (): Promise<TodoModel[]> => {
   }
   return data ?? [];
 }
+
+export const inserTodo = async (todo: TodoModel): Promise<TodoModel> => {
+  const {data} = await axios.post<TodoModel>(`${ENV_VARIABLES.TODO_API_BASE_URL}/todos`, todo);
+  return data;
+}
